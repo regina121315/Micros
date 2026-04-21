@@ -1,0 +1,145 @@
+root = true
+
+# All files
+[*]
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = true
+charset = utf-8
+
+# C# files
+[*.cs]
+indent_size = 4
+
+# Code style rules
+csharp_style_var_for_built_in_types = false
+csharp_style_var_when_type_is_apparent = true
+csharp_style_var_elsewhere = false
+
+# Async/await rules
+csharp_style_pattern_matching_over_as_with_null_check = true:warning
+csharp_style_inlined_variable_declaration = true:suggestion
+csharp_style_throw_expression = true:suggestion
+
+# Naming conventions for async methods
+dotnet_naming_rule.async_methods_should_be_ends_with_async.severity = warning
+dotnet_naming_rule.async_methods_should_be_ends_with_async.symbols = async_methods
+dotnet_naming_rule.async_methods_should_be_ends_with_async.style = ends_with_async
+dotnet_naming_symbols.async_methods.applicable_kinds = method
+dotnet_naming_symbols.async_methods.applicable_accessibilities = *
+dotnet_naming_symbols.async_methods.required_modifiers = async
+dotnet_naming_style.ends_with_async.required_suffix = Async
+dotnet_naming_style.ends_with_async.capitalization = pascal_case
+
+# Unused variable rules
+# IDE0059 - Unnecessary assignment of a value
+dotnet_diagnostic.IDE0059.severity = warning
+
+# IDE0061 - Use expression body for local functions
+csharp_style_expression_bodied_local_functions = true:suggestion
+
+# IDE0161 - Use file-scoped namespace
+csharp_style_namespace_declarations = file_scoped:suggestion
+
+# Suppress unused variable warnings from specific patterns (like fire-and-forget)
+# CS0168 - Variable is declared but never used
+dotnet_diagnostic.CS0168.severity = warning
+
+# Rules to promote cleaner code
+# CA1816 - Call GC.SuppressFinalize correctly
+dotnet_diagnostic.CA1816.severity = suggestion
+
+# CA1806 - Do not ignore method results
+dotnet_diagnostic.CA1806.severity = warning
+
+# Async/await style rules
+csharp_style_prefer_method_group_conversion = true:silent
+csharp_style_implicit_object_creation_when_type_is_apparent = true:suggestion
+
+# Additional analysis rules
+# IDE0005 - Remove unnecessary imports
+dotnet_diagnostic.IDE0005.severity = warning
+
+# IDE0010 - Add missing cases to switch
+dotnet_diagnostic.IDE0010.severity = warning
+
+# IDE0055 - Fix indentation and whitespace
+dotnet_diagnostic.IDE0055.severity = suggestion
+
+# IDE0160 - Use block scoped namespace
+dotnet_diagnostic.IDE0160.severity = silent
+
+# IDE0290 - Use primary constructors
+csharp_style_prefer_primary_constructors = true:suggestion
+dotnet_diagnostic.IDE0290.severity = suggestion
+
+# CA1001 - Types that own disposable fields should be disposable
+dotnet_diagnostic.CA1001.severity = warning
+
+# CA1309 - Use ordinal string comparison
+dotnet_diagnostic.CA1309.severity = suggestion
+
+# CA1816 - Call GC.SuppressFinalize correctly
+dotnet_diagnostic.CA1816.severity = suggestion
+
+# CA1820 - Test for empty strings using string length
+dotnet_diagnostic.CA1820.severity = suggestion
+
+# CA1827-CA1829 - Use Count/LongCount property instead of LINQ
+dotnet_diagnostic.CA1827.severity = suggestion
+dotnet_diagnostic.CA1828.severity = suggestion
+dotnet_diagnostic.CA1829.severity = suggestion
+
+# CA1830 - Prefer strongly-typed Append and Insert method overloads on StringBuilder
+dotnet_diagnostic.CA1830.severity = suggestion
+
+# CA1831 - Use AsSpan instead of Range-based indexers
+dotnet_diagnostic.CA1831.severity = suggestion
+
+# CA1832 - Use AsSpan or AsMemory instead of Range-based indexers
+dotnet_diagnostic.CA1832.severity = suggestion
+
+# CA1833 - Use AsSpan or AsMemory instead of Range-based indexers
+dotnet_diagnostic.CA1833.severity = suggestion
+
+# CA1834 - Use StringBuilder.Append(char) for single character strings
+dotnet_diagnostic.CA1834.severity = suggestion
+
+# CA1835 - Prefer memory-based overloads of ReadAsync/WriteAsync
+dotnet_diagnostic.CA1835.severity = suggestion
+
+# CA1845 - Use span-based 'string.Concat'
+dotnet_diagnostic.CA1845.severity = suggestion
+
+# CA1846 - Prefer AsSpan over Substring
+dotnet_diagnostic.CA1846.severity = suggestion
+
+# CA1847 - Use string.Contains(char) instead of string.Contains(string)
+dotnet_diagnostic.CA1847.severity = suggestion
+
+# CA1854 - Prefer the dictionary TryGetValue method
+dotnet_diagnostic.CA1854.severity = suggestion
+
+# CA1855 - Prefer using 'Clear' instead of 'Linq.Clear()'
+dotnet_diagnostic.CA1855.severity = suggestion
+
+# CA1856 - Incorrect usage of ConstantExpected attribute
+dotnet_diagnostic.CA1856.severity = warning
+
+# CA1857 - A parameter with a ConstantExpected attribute was not invoked with a constant value
+dotnet_diagnostic.CA1857.severity = warning
+
+# CA2000 - Dispose objects before losing scope
+dotnet_diagnostic.CA2000.severity = warning
+
+# CA2008 - Do not create tasks without passing a TaskScheduler
+dotnet_diagnostic.CA2008.severity = suggestion
+
+# CS0162 - Unreachable code detected
+dotnet_diagnostic.CS0162.severity = warning
+
+# CS0219 - The variable is assigned but its value is never used
+dotnet_diagnostic.CS0219.severity = warning
+
+# CS0649 - Field is never assigned to, and will always have its default value
+dotnet_diagnostic.CS0649.severity = warning

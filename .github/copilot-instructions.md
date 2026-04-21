@@ -25,6 +25,8 @@ Blazor WebAssembly app for Social Bingo with interactive gameplay and win tracki
 - PascalCase for classes, camelCase for params
 - Async/await for ops
 - IDisposable for event cleanup
+- Remove unused variables
+- Use async/await consistently (avoid async void, prefer Task)
 
 ## Styling Guidelines
 - Custom CSS utilities in `wwwroot/css/app.css`
